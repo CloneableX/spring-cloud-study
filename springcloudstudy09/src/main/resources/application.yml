@@ -1,0 +1,27 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/CloneableX/spring-cloud-study.git
+          search-paths: springcloudstudy09/config
+          username: ******
+          password: ******
+      label: master
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ipAddress}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  security:
+    #关闭安全验证，否则访问refresh端点时会提示权限不足
+    enabled: false

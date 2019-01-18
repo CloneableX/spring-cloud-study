@@ -1,0 +1,25 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: hello
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: hello
+      label: master
+      discovery:
+        enabled: true
+        service-id: config
+      profile: dev
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  security:
+    enabled: false
