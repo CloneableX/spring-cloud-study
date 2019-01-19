@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lps_cars?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: yxcl123456
+    driver-class-name: com.mysql.jdbc.Driver
+  profiles:
+    active: dev
+userDefined:
+  testValue:
+    ip: 127.0.0.1
+    port: 8080
