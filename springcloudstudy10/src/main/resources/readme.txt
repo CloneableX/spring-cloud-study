@@ -1,0 +1,2 @@
+1.使用zipkin进行链路追踪
+2.将zipkin记录存储入mysql数据库
