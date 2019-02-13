@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: common
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: eureka,key
+      label: master
+      discovery:
+        enabled: true
+        service-id: config
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+server:
+  port: 8084
